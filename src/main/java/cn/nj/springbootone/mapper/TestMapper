@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.nj.springbootone.mapper.TestMapper">
+    <!--批量插入-->
+    <insert id="pilianginsert" parameterType="List"  >
+        INSERT into test(id ,name1,age) VALUES
+        <foreach collection="pl" item="ac" index="index" separator=",">
+            (#{ac.id},#{ac.name},#{ac.age})
+        </foreach>
+    </insert>
+</mapper>

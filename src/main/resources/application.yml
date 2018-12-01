@@ -20,6 +20,13 @@ pagehelper:
   support-methods-arguments: true
   params: count=countSql
 
+#mybatis config
+ # mybatis:
+   # typeAliasesPackage: cn.nj.springbootone.pojo
+   # mapper-locations: classpath*:mapper/*.xml
+
+
+
 
 
 

@@ -4,7 +4,7 @@ package cn.nj.springbootone.pojo;
  **/
 public class Test {
     private int id;
-    private String name;
+    private String yourname;
     private int age;
 
     public int getId() {
@@ -15,12 +15,12 @@ public class Test {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getYourname() {
+        return yourname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setYourname(String yourname) {
+        this.yourname = yourname;
     }
 
     public int getAge() {

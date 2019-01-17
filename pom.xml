@@ -29,7 +29,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId> org.springframework.boot </groupId>
             <artifactId> spring-boot-configuration-processor </artifactId>
@@ -108,7 +107,17 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.21</version>
         </dependency>
+        <!--rabbitmq 依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
 
+        <!--可以引入日志 @Slf4j注解-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -119,26 +128,6 @@
             </plugin>
         </plugins>
 
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.yml</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
 
     </build>
 

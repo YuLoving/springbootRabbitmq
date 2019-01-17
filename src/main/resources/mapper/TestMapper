@@ -3,9 +3,9 @@
 <mapper namespace="cn.nj.springbootone.mapper.TestMapper">
     <!--批量插入-->
     <insert id="pilianginsert" parameterType="List"  >
-        INSERT into test(id ,name1,age) VALUES
+        INSERT into test(id ,yourname,age) VALUES
         <foreach collection="pl" item="ac" index="index" separator=",">
-            (#{ac.id},#{ac.name},#{ac.age})
+            (#{ac.id},#{ac.yourname},#{ac.age})
         </foreach>
     </insert>
 </mapper>

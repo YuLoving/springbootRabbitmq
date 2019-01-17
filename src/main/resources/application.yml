@@ -1,5 +1,16 @@
 
+server:
+  port: 8080
+
 spring:
+  #rabbitmq
+  rabbitmq:
+    host: 192.168.25.133
+    port: 5672
+    username: root
+    password: 123456
+    publisher-confirms: true    #  消息发送到交换机确认机制,是否确认回调
+
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -12,6 +23,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update #\u65B0\u589E\u6570\u636E\u5E93\u94FE\u63A5\u5FC5\u5907\u7684\u53C2\u6570
+  mongodb:
+    embedded:
+      version:
 
 # pageHelper分页配置
 pagehelper:
@@ -21,9 +35,12 @@ pagehelper:
   params: count=countSql
 
 #mybatis config
- # mybatis:
-   # typeAliasesPackage: cn.nj.springbootone.pojo
-   # mapper-locations: classpath*:mapper/*.xml
+  mybatis:
+    mapper-locations: classpath:mapper/*.xml
+
+
+
+
 
 
 
